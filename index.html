@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" href="/static/images/favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+</style>
+<body class="overflow-x-hidden font-[Audiowide,sans-serif] min-h-screen max-w-full bg-black">
+
+    <!-- Ist section start  -->
+    <section id="home" class="min-h-screen max-w-full  flex flex-col justify-center items-center content-center bg-black pb-28">
+      <!-- Header Start -->
+      <header class="max-w-full self-center fixed z-50 top-0 w-full text-white bg-[#000000] p-4">
+        <div class="flex justify-between">
+          <ul class="">
+            <a href="/"><img src="/static/images/Logo.png" alt="Cipher" srcset="" class="h-12 w-40"></a>
+          </ul>
+          <ul class=" hidden md:flex space-x-16 font-bold items-center">
+            <a href="#home">
+              <li class="hover:underline underline-offset-4 cursor-pointer hover:text-blue-600">Home</li>
+            </a>
+            <a href="#working">
+              <li class="hover:underline underline-offset-4 cursor-pointer hover:text-blue-600">Working</li>
+            </a>
+            <a href="#about">
+              <li class="hover:underline underline-offset-4 cursor-pointer hover:text-blue-600">About Us</li>
+            </a>
+          </ul>
+          <button class="block px-3 py-1 md:hidden hover:bg-white rounded-xl group">
+            <div class="w-5 my-[3px] h-[3px] bg-blue-700 mb-[2px]"></div>
+            <div class="w-5 my-[3px] h-[3px] bg-blue-700 mb-[2px]"></div>
+            <div class="w-5 my-[3px] h-[3px] bg-blue-700"></div>
+            <div
+              class="absolute top-0 -right-full opacity-0 h-screen w-[50%] border border-blue-600 bg-black group-focus:right-0 group-focus:opacity-100 transition-all ease-in duration-300 ">
+              <ul class="flex flex-col items-center text-[18px] pt-[60px]">
+                <a href="/#home">
+                  <li class="hover:underline underline-offset-4 py-4 px-6 w-full">Home</li>
+                </a>
+                <a href="/#working">
+                  <li class="hover:underline underline-offset-4 py-4 px-6 w-full">Working</li>
+                </a>
+                <a href="/#about">
+                  <li class="hover:underline underline-offset-4 py-4 px-6 w-full">About Us</li>
+                </a>
+              </ul>
+            </div>
+          </button>
+        </div>
+      </header>
+      <!-- Header end -->
+  
+      <!-- landing page start -->
+      <code
+        class="font-[Audiowide,sans-serif] p-16 2xl:p-32 mt-44 text-white rounded-md border border-blue-800 w-11/12 md:w-10/12 xl:w-[60%] 2xl:w-[50%]  text-center flex justify-center items-center backdrop-blur-sm shadow-lg shadow-blue-700/60 hover:shadow-blue-700/90 border-opacity-60 ">
+        <div class=" space-y-24 flex flex-col">
+          <p class=" text-blue-500 font-medium text-lg md:text-2xl xl:text-3xl w-[80vw] md:w-[50vw] lg:w-full hover:contrast-200">Defend Your Files with the Shield of Encryption.<br/>Choose an Action!</p>
+          <!-- animate-bounce  bg-gradient-to-r from-red-600 to-blue-700 rounded-md p-5 -->
+          <div class="lg:space-x-20 space-y-10 lg:space-y-0 flex flex-col justify-center lg:flex-row ">
+            <button onclick="encryptData()" id="encryptButton" class=" md:text-xl md:w-9/12 lg:w-7/12 m-auto py-2 px-10 md:py-4 md:px-16 outline outline-2 outline-offset-4 ring ring-blue-800 outline-blue-700 hover:outline-orange-700 hover:ring-red-700 rounded-lg  hover:bg-red-700/50 bg-blue-500/50 hover:scale-110 transition ease-in-out duration-500">Encrypt</button> 
+            <button onclick="decryptData()" id="decryptButton" class=" md:text-xl md:w-9/12 lg:w-7/12 m-auto py-2 px-10 md:py-4 md:px-16 outline outline-2 outline-offset-4 ring ring-blue-800 outline-blue-700 hover:outline-orange-700 hover:ring-red-700 rounded-lg  hover:bg-red-700/50 bg-blue-500/50 hover:scale-110 transition ease-in-out duration-500">Decrypt</button>
+          </div>
+        </div>
+       </code>
+        <a href="/#working" class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+      <!-- landing page end -->
+    </section>
+    <!-- Ist section end  -->
+  
+    <!-- 2nd section start  -->
+    <section id="working"
+      class="max-w-full lg:mx-auto my-auto lg:h-screen lg:flex justify-center items-center text-white bg-black space-y-20 lg:space-y-0 lg:space-x-20 px-16 xl:px-44 py-32 lg:py-0">
+      <img src="/static/images/use app.png" alt="" class="md:w-72 md:h-44 lg:w-96 lg:h-72 m-auto">
+      <div class="text-justify lg:text-2xl flex flex-col justify-center items-center space-y-20">
+        <h1 class="md:w-[600px] lg:w-full md:text-xl xl:text-2xl ">Don't know how to use ? Don't worry, we are here to
+          help you. Click on below button to know how to encrpyt and decrypt the files and enjoy our amazing services</h1>
+        <button onclick="appWorking()" id="appWorkingButton"
+        class="py-2 px-10 xl:py-4 xl:px-16 outline outline-2 outline-offset-4 ring ring-blue-800 outline-blue-700 hover:outline-orange-700 hover:ring-red-700 rounded-lg  hover:bg-red-700/50 bg-blue-500/50 hover:scale-95 transition ease-in-out duration-500">Click Here</button> 
+  
+      </div>
+    </section>
+    <!-- 2nd section end  -->
+  
+    <!-- 3rd section start  -->
+    <section id="about" style="background-image: url(/static/images/before-conference.jpg);"
+      class="max-w-full mx-auto brightness-75 bg-cover bg-left text-white md:px-20 md:pt-28 flex flex-col justify-center items-center space-y-10 pb-20">
+      <p class="md:mb-10 text-2xl xl:text-3xl cursor-pointer">About
+        us</p>
+      <article class="grid md:grid-rows-2 md:grid-flow-col gap-16 justify-center items-center text-center ">
+        <!-- ist card -->
+        <div
+          class="bg-blue-500/70  p-8 h-auto w-72 flex flex-col justify-center items-center space-y-8 rounded-lg hover:scale-110 transition ease-out duration-500">
+          <code class=" flex justify-center items-center space-x-5 text-lg">
+             <img src="/static/images/rounded rishant 1.jpg" class="w-24 h-16 rounded-md" alt="">
+             <p class="text-xl font-bold text-blue-500 bg-white rounded-md ">Rishant Shukla</p>
+          </code>
+          <article class="animate-typing overflow-hidden whitespace-nowrap text-white font-medium ">
+            Front-End Developer
+          </article>
+          <div class="grid grid-rows-2 grid-flow-col gap-x-8 gap-y-4 bg-white rounded-2xl p-4">
+            <a href="https://www.linkedin.com/in/rishant-shukla-369a9125a/" target="_blank"><ion-icon name="logo-linkedin"
+                class="w-10 h-7 cursor-pointer text-blue-500 hover:scale-125 ease-in-out duration-500 hover:text-blue-600"></ion-icon></a>
+            <a href="https://github.com/RishantShukla/" target="_blank"><ion-icon name="logo-github"
+                class="w-10 h-7 cursor-pointer text-black hover:scale-125 ease-in-out duration-500 "></ion-icon></a>
+            <a href="mailto:22MCC20053@cuchd.in" target="_blank"><ion-icon name="mail"
+                class="w-10 h-7 cursor-pointer text-yellow-400 hover:scale-125 ease-in-out duration-500 hover:text-yellow-500"></ion-icon></a>
+            <a href="https://www.hackerrank.com/profile/rishantshukla201" target="_blank"><ion-icon name="globe-outline"
+                class="w-10 h-7 cursor-pointer text-red-500 hover:scale-125 ease-in-out duration-500 hover:text-red-600"></ion-icon></a>
+          </div>
+        </div>
+        <!-- 2nd card -->
+        <div
+          class="bg-blue-500/70 p-8 h-auto w-72 flex flex-col justify-center items-center space-y-8 rounded-lg hover:scale-110 transition ease-out duration-500">
+          <code class=" flex justify-center items-center space-x-5 text-lg">
+           <img src="/static/images/sarthak.png" class="w-24 h-16 rounded-md" alt="">
+           <p class="text-xl font-bold text-blue-500 bg-white rounded-md ">Sarthak Ranjan</p>
+          </code>
+          <article class="animate-typing overflow-hidden whitespace-nowrap text-white font-medium">Front-End Developer
+          </article>
+          <div class="grid grid-rows-2 grid-flow-col gap-x-8 gap-y-4 bg-white rounded-2xl p-4">
+            <a href="https://www.linkedin.com/in/sarthak-ranjan-senapati/" target="_blank"><ion-icon name="logo-linkedin"
+                class="w-10 h-7 cursor-pointer text-blue-500 hover:scale-125 ease-in-out duration-500 hover:text-blue-600"></ion-icon></a>
+            <a href="https://github.com/Sarthak-Senapati" target="_blank"><ion-icon name="logo-github"
+                class="w-10 h-7 cursor-pointer text-black hover:scale-125 ease-in-out duration-500 "></ion-icon></a>
+            <a href="mailto:22MCC20055@cuchd.in" target="_blank"><ion-icon name="mail"
+                class="w-10 h-7 cursor-pointer text-yellow-400 hover:scale-125 ease-in-out duration-500 hover:text-yellow-500"></ion-icon></a>
+            <a href="https://www.hackerrank.com/profile/sarthaktech7" target="_blank"><ion-icon name="globe-outline"
+                class="w-10 h-7 cursor-pointer text-red-500 hover:scale-125 ease-in-out duration-500 hover:text-red-600"></ion-icon></a>
+          </div>
+        </div>
+        <!-- 3rd card -->
+        <div
+          class="bg-blue-500/70  p-8 h-auto w-72 flex flex-col justify-center items-center space-y-8 rounded-lg hover:scale-110 transition ease-out duration-500">
+          <code class=" flex justify-center items-center space-x-5 text-lg">
+           <img class="rounded-md w-24 h-16" src="/static/images/Amar.jpg" alt="Amar Preet Das">
+           <p class="text-xl font-bold text-blue-500 bg-white rounded-md ">Amar Preet Das</p>
+          </code>
+          <article class="animate-typing overflow-hidden whitespace-nowrap text-white font-medium">Back-End Developer
+          </article>
+          <div class="grid grid-rows-2 grid-flow-col gap-x-8 gap-y-4 bg-white rounded-2xl p-4">
+            <a href="https://www.linkedin.com/in/dasamarpreet/" target="_blank"><ion-icon name="logo-linkedin"
+                class="w-10 h-7 cursor-pointer text-blue-500 hover:scale-125 ease-in-out duration-500 hover:text-blue-600"></ion-icon></a>
+            <a href="https://github.com/dasamarpreet" target="_blank"><ion-icon name="logo-github"
+                class="w-10 h-7 cursor-pointer text-black hover:scale-125 ease-in-out duration-500 "></ion-icon></a>
+            <a href="mailto:22MCC20005@cuchd.in" target="_blank"><ion-icon name="mail"
+                class="w-10 h-7 cursor-pointer text-yellow-400 hover:scale-125 ease-in-out duration-500 hover:text-yellow-500"></ion-icon></a>
+            <a href="https://dasamarpreet.github.io/apdas/" target="_blank"><ion-icon name="globe-outline"
+                class="w-10 h-7 cursor-pointer text-red-500 hover:scale-125 ease-in-out duration-500 hover:text-red-600"></ion-icon></a>
+          </div>
+        </div>
+        <!-- 4th card -->
+        <div
+          class="bg-blue-500/70  p-8 h-auto w-72 flex flex-col justify-center items-center space-y-8 rounded-lg hover:scale-110 transition ease-out duration-500">
+          <code class=" flex justify-center items-center space-x-5 text-lg">
+            <img src="/static/images/Atharv.jpeg" class="w-20 h-16 rounded-md" alt="">
+           <p class="text-xl font-bold text-blue-500 bg-white rounded-md ">Atharv Singh</p>
+          </code>
+          <article class="animate-typing overflow-hidden whitespace-nowrap text-white font-medium">Back-End Developer
+          </article>
+          <div class="grid grid-rows-2 grid-flow-col gap-x-8 gap-y-4 bg-white rounded-2xl p-4">
+            <a href="https://www.linkedin.com/in/atharv753/" target="_blank"><ion-icon name="logo-linkedin"
+                class="w-10 h-7 cursor-pointer text-blue-500 hover:scale-125 ease-in-out duration-500 hover:text-blue-600"></ion-icon></a>
+            <a href="https://github.com/Atharv753" target="_blank"><ion-icon name="logo-github"
+                class="w-10 h-7 cursor-pointer text-black hover:scale-125 ease-in-out duration-500 "></ion-icon></a>
+            <a href="mailto:22MCC20007@cuchd.in" target="_blank"><ion-icon name="mail"
+                class="w-10 h-7 cursor-pointer text-yellow-400 hover:scale-125 ease-in-out duration-500 hover:text-yellow-500"></ion-icon></a>
+            <a href="https://www.hackerrank.com/profile/atharvsingh753" target="_blank"><ion-icon name="globe-outline"
+                class="w-10 h-7 cursor-pointer text-red-500 hover:scale-125 ease-in-out duration-500 hover:text-red-600"></ion-icon></a>
+          </div>
+        </div>
+      </article>
+      <!-- <p class="bg-black px-6 py-5 text-center "></p> -->
+    </section>
+    <!-- 3rd section end  -->
+  
+    <!-- 4th section start  -->
+    <section class="max-w-full mx-auto brightness-90 bg-white flex flex-col md:flex-row items-center justify-between space-y-1 md:space-y-0 md:justify-center md:space-x-8 p-4 text-sm md:text-base">
+      <span class="text-blue-600">© 2023 Copyright: All rights reserved.</span>
+      <a href="/#about"><span class="text-red-500 font-medium">Designed with &#x2764; by S.A.R.A.</span></a>
+      <span class="text-green-500">Made in <strong class="text-orange-500"> India !</strong></span>
+    </section>
+    <!-- 4th section end  -->
+  
+  
+    <script src="/static/js/vanta1.js"></script>
+    <script src="/static/js/vanta2.js"></script>
+  
+    <script>
+      VANTA.NET({
+        el: "#home",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        // minHeight: 720.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        points: 13.00,
+        maxDistance: 20.00,
+        color: 0x293a98,
+        backgroundColor: 0x0
+      })
+    </script>
+  
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
